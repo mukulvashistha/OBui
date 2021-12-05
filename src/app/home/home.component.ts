@@ -9,6 +9,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
       <h1 class="mat-h1">Welcome to your bank</h1>
       <mat-grid-list cols="2" rowHeight="350px">
         <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+        <a  routerLink={{card.action}}>
           <mat-card class="dashboard-card">
             <mat-card-header>
               <mat-card-title>
@@ -18,19 +19,23 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
               </mat-card-title>
             </mat-card-header>
             <mat-card-content class="dashboard-card-content">
-              <div>please Click Here</div>
-            </mat-card-content>
-            <div>
-            <button>
-            <div class = "e-card">
-    <div class="e-card-actions e-card-vertical">
-    <button class="e-card-btn"><a  routerLink={{card.action}}>click here</a></button>
-
-    </div>
-</div>
-            </button>
+              <div>please click on this slide
+              <div class = "e-card">
+              
+   
+            
             </div>
+             <picture>
+    <source media='(min-width:0px)' srcset="https://material.angular.io/assets/img/examples/shiba2.jpg">
+    <img mat-card-image src="" alt="Photo of a Shiba Inu">
+  </picture>
+              </div>
+            </mat-card-content>
+           
+            
+            
           </mat-card>
+          </a>
         </mat-grid-tile>
       </mat-grid-list>
     </div>
@@ -48,7 +53,7 @@ export class HomeComponent {
         return [
           { title: 'New User',action:"/addUser" ,cols: 2, rows: 1 },
           { title: 'Staff Login',action:"/staff", cols: 2, rows: 1 },
-          { title: 'User Login', action:"/users",cols: 2, rows: 1 },
+          { title: 'User Login', action:"/userInterface",cols: 2, rows: 1 },
           { title: 'About Us',action:"", cols: 2, rows: 1 }
         ];
       }
@@ -56,7 +61,7 @@ export class HomeComponent {
       return [
         { title: 'New User', cols: 1, rows: 1,action:"/addUser" },
         { title: 'Staff Login', cols: 1, rows: 1,action:"/staff" },
-        { title: 'User Login', cols: 1, rows: 1 ,action:"/users"},
+        { title: 'User Login', cols: 1, rows: 1 ,action:"/userInterface"},
         { title: 'About Us', cols: 1, rows: 1 ,action:""}
       ];
     })

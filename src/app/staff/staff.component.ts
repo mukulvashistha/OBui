@@ -1,39 +1,81 @@
-import { Component, OnInit } from '@angular/core';
+import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { Component } from '@angular/core';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-staff',
   template: `
-  <form action="">
-      <h1>Login Form</h1>
-      <div class="formcontainer">
-      <hr/>
-      <div class="container">
-        <label for="uname"><strong>Username</strong></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-        <label for="psw"><strong>Password</strong></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-      </div>
-      <button type="submit">Login</button>
-      <div class="container" style="background-color: #eee">
-        <label style="padding-left: 15px">
-        <input type="checkbox"  checked="checked" name="remember"> Remember me
-        </label>
-        <span class="psw"><a href="#"> Forgot password?</a></span>
-      </div>
-      </div>
-    </form>
-    
+  <div class="grid-container">
+  <h1 class="mat-h1">Staff Services</h1>
+  <mat-grid-list cols="3" rowHeight="250px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+    <a  routerLink={{card.action}}>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+            
+
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>please click on this slide
+          <div class = "e-card">
+          
+
+        
+        </div>
+         <picture>
+<source media='(min-width:0px)' srcset="https://material.angular.io/assets/img/examples/shiba2.jpg">
+<img mat-card-image src="" alt="Photo of a Shiba Inu">
+</picture>
+          </div>
+        </mat-card-content>
+       
+        
+        
+      </mat-card>
+      </a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
   <p>
       staff works!
     </p>
   `,
   styleUrls: ['./staff.component.css']
 })
-export class StaffComponent implements OnInit {
+export class StaffComponent {
 
-  constructor() { }
+  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+    map(({ matches }) => {
+      if (matches) {
+        return [
+          { title: 'View Users', cols: 1, rows: 1,action:"/users" },
+          { title: 'View Accounts', cols: 1, rows: 1,action:"/accounts" },
+          { title: ' View Customer ',action:"/viewCustomer" ,cols: 3, rows: 1 },
+          { title: 'View Transactions',action:"/staff", cols: 3, rows: 1 },
+          { title: ' View Card Application', action:"",cols: 3, rows: 1 },
+          { title: ' Add Customer ',action:"/createcust" ,cols: 3, rows: 1 },
+          { title: 'Add Account',action:"/addaccount", cols: 3, rows: 1 },
+          { title: 'Request Approval',action:"/updatereq", cols: 3, rows: 1 }
+        ];
+      }
 
-  ngOnInit(): void {
-  }
+      return [
+        { title: 'View Users', cols: 1, rows: 1,action:"/users" },
+        { title: 'View Accounts', cols: 1, rows: 1,action:"/accounts" },
+        { title: 'View Customer', cols: 1, rows: 1,action:"/viewCustomer" },
+        { title: 'View Transactions', cols: 1, rows: 1,action:"/staff" },
+        { title: 'View Card Application', cols: 1, rows: 1 ,action:""},
+        { title: 'Add Customer', cols: 1, rows: 1,action:"/createcust" },
+        { title: 'Add Account', cols: 1, rows: 1 ,action:"/addaccount"},
+        { title: 'Request Approval',action:"/updatereq", cols: 1, rows: 1 }
+      ];
+    })
+  );
 
+  constructor(private breakpointObserver: BreakpointObserver) {}
 }
+
+

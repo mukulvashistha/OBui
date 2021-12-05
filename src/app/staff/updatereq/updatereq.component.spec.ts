@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { QuickComponent } from './quick.component';
+import { UpdatereqComponent } from './updatereq.component';
 
-describe('QuickComponent', () => {
-  let component: QuickComponent;
-  let fixture: ComponentFixture<QuickComponent>;
+describe('UpdatereqComponent', () => {
+  let component: UpdatereqComponent;
+  let fixture: ComponentFixture<UpdatereqComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QuickComponent ]
+      declarations: [ UpdatereqComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QuickComponent);
+    fixture = TestBed.createComponent(UpdatereqComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

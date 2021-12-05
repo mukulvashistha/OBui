@@ -15,7 +15,7 @@ import { map, shareReplay } from 'rxjs/operators';
         <mat-nav-list>
           <a mat-list-item routerLink="/home">Home</a>
           <a mat-list-item  routerLink="/check">Check Balance</a>
-          <a mat-list-item routerLink="/quick">Quick Transfer</a>
+          <a mat-list-item routerLink="/transaction">Quick Transfer</a>
           <a mat-list-item href="#">About Us</a>
         </mat-nav-list>
       </mat-sidenav>

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-quick',
+  selector: 'app-updatereq',
   template: `
     <p>
-      quick works!
+      updatereq works!
     </p>
   `,
-  styleUrls: ['./quick.component.css']
+  styleUrls: ['./updatereq.component.css']
 })
-export class QuickComponent implements OnInit {
+export class UpdatereqComponent implements OnInit {
 
   constructor() { }
 

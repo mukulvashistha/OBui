@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Users } from '../models/users';
+import { UsersService } from '../shared/users.service';
 
 @Component({
   selector: 'app-add-user',
   template: `
+ 
   <div class="row justify-content-center ">
 
 
@@ -23,19 +26,19 @@ import { Component, OnInit } from '@angular/core';
  
 
 
-
+    <form (submit)="onSubmit()" action="">
     <div class="mb-3 input-group-sm ">
 
       <label for="exampleFormControlInput1" class="form-label">User Name</label>
 
-      <input type="email" class="form-control rounded-pill" id="exampleFormControlInput1" placeholder="Alex John">
+      <input type="name" [(ngModel)] ="username" name="user" class="form-control rounded-pill" id="exampleFormControlInput1" placeholder="Alex John">
 
     </div>
     <div class="mb-3 input-group-sm">
 
     <label for="exampleFormControlInput1" class="form-label">Password</label>
 
-    <input type="email" class="form-control rounded-pill" id="exampleFormControlInput1" placeholder="*********">
+    <input type="password" class="form-control rounded-pill"  [(ngModel)] ="password" name="password" id="exampleFormControlInput1" placeholder="*********">
 
   </div>
 
@@ -43,14 +46,14 @@ import { Component, OnInit } from '@angular/core';
 
     <label for="exampleFormControlInput1" class="form-label">Mobile no.</label>
 
-    <input type="email" class="form-control rounded-pill" id="exampleFormControlInput1" placeholder="91*******">
+    <input type="name"   [(ngModel)] ="Mobile"  name="mobile" class="form-control rounded-pill" id="exampleFormControlInput1" placeholder="91*******">
 
   </div>   
   <div class="mb-3 input-group-sm">
 
       <label for="exampleFormControlInput1" class="form-label">Aadhar</label>
 
-      <input type="email" class="form-control rounded-pill" id="exampleFormControlInput1" placeholder="">
+      <input type="name"   [(ngModel)] ="aadhar"  name="aadhar" class="form-control rounded-pill" id="exampleFormControlInput1" placeholder="">
 
     </div>
 
@@ -58,13 +61,13 @@ import { Component, OnInit } from '@angular/core';
 
       <label for="exampleFormControlInput1" class="form-label">PAN no.</label>
 
-      <input type="email" class="form-control rounded-pill" id="exampleFormControlInput1" >
+      <input type="name"  [(ngModel)] ="pan"  name="pan"  class="form-control rounded-pill" id="exampleFormControlInput1" >
 
     </div>
 
  
 
-    <select class="form-select form-select-sm mb-3 rounded-pill" aria-label=".form-select-sm example">
+    <select [(ngModel)]="accounttype"  name="accounttype"class="form-select form-select-sm mb-3 rounded-pill" aria-label=".form-select-sm example">
 
       <option selected>Choose your account type</option>
 
@@ -82,6 +85,8 @@ import { Component, OnInit } from '@angular/core';
 
 
     </div>
+    </form>
+
 
   </div>
 
@@ -91,7 +96,7 @@ import { Component, OnInit } from '@angular/core';
 
  
   
-    
+
   
 
     <p>
@@ -101,10 +106,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-
-  constructor() { }
+public username:string="";
+public password:string="";
+public Mobile :string="";
+public aadhar:string="";
+public pan:string="";
+public accounttype:string="";
+objPosts:Users=new Users();
+  constructor(private  _UsersService:UsersService) { }
 
   ngOnInit(): void {
+  }
+  onSubmit(){
+    var user=new Users();
+user.cust_name=this.username;
+user.password=this.password;
+user.mobile=this.Mobile;
+user.aadhar=this.aadhar;
+user.pan_no=this.pan;
+user.account_type=this.accounttype;
+this._UsersService.postusers(user).subscribe(
+  data=>
+  {
+
+  this.objPosts= data;
+  }
+)
   }
 
 }
