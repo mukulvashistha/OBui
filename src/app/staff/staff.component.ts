@@ -54,11 +54,10 @@ export class StaffComponent {
           { title: 'View Users', cols: 1, rows: 1,action:"/users" },
           { title: 'View Accounts', cols: 1, rows: 1,action:"/accounts" },
           { title: ' View Customer ',action:"/viewCustomer" ,cols: 3, rows: 1 },
-          { title: 'View Transactions',action:"/staff", cols: 3, rows: 1 },
-          { title: ' View Card Application', action:"",cols: 3, rows: 1 },
+          { title: 'View Transactions',action:"/alltransaction", cols: 3, rows: 1 },
           { title: ' Add Customer ',action:"/createcust" ,cols: 3, rows: 1 },
           { title: 'Add Account',action:"/addaccount", cols: 3, rows: 1 },
-          { title: 'Request Approval',action:"/updatereq", cols: 3, rows: 1 }
+          { title: 'Request Approval',action:"/viewrequest", cols: 3, rows: 1 }
         ];
       }
 
@@ -66,11 +65,10 @@ export class StaffComponent {
         { title: 'View Users', cols: 1, rows: 1,action:"/users" },
         { title: 'View Accounts', cols: 1, rows: 1,action:"/accounts" },
         { title: 'View Customer', cols: 1, rows: 1,action:"/viewCustomer" },
-        { title: 'View Transactions', cols: 1, rows: 1,action:"/staff" },
-        { title: 'View Card Application', cols: 1, rows: 1 ,action:""},
+        { title: 'View Transactions', cols: 1, rows: 1,action:"/alltransaction" },
         { title: 'Add Customer', cols: 1, rows: 1,action:"/createcust" },
         { title: 'Add Account', cols: 1, rows: 1 ,action:"/addaccount"},
-        { title: 'Request Approval',action:"/updatereq", cols: 1, rows: 1 }
+        { title: 'Request Approval',action:"/viewrequest", cols: 1, rows: 1 }
       ];
     })
   );

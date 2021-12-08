@@ -1,0 +1,16 @@
+table{
+    width: 220px;
+    height: 150px;
+    background-color: grey;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.btn-class {
+
+    text-align:center;
+  
+    }

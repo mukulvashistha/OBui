@@ -14,6 +14,10 @@ import { TransactionComponent } from './user-interface/transaction/transaction.c
 import { CardrequestComponent } from './user-interface/cardrequest/cardrequest.component';
 import { UpdatereqComponent } from './staff/updatereq/updatereq.component';
 import { AddaccountComponent } from './staff/addaccount/addaccount.component';
+import { ViewrequestComponent } from './staff/viewrequest/viewrequest.component';
+import { BalanceComponent } from './user-interface/balance/balance.component';
+import { ViewtransactionsComponent } from './user-interface/viewtransactions/viewtransactions.component';
+import { AlltransactionsComponent } from './staff/alltransactions/alltransactions.component';
 
 
 const routes: Routes = [
@@ -21,7 +25,8 @@ const routes: Routes = [
   ,{path:'staff',component:StaffComponent},{path:'users',component:UsersComponent},{path:'userInterface',component:UserInterfaceComponent},
   {path:'viewCustomer',component:AddCustomerComponent},{path:'accounts',component:AccountsComponent},{path:'createcust',component:CreatecustComponent},
   {path:'viewaccounts',component:ViewaccountsComponent},{path:'transaction',component:TransactionComponent},{path:'updatereq',component:UpdatereqComponent},
-{path:'addaccount',component:AddaccountComponent}
+{path:'addaccount',component:AddaccountComponent},{path:'viewrequest',component:ViewrequestComponent},
+{path:'balance',component:BalanceComponent},{path:'viewtransactions',component:ViewtransactionsComponent},{path:'alltransaction',component:AlltransactionsComponent}
 ];
 
 @NgModule({

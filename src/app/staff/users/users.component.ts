@@ -19,7 +19,7 @@ import { Users } from '../../models/users';
 
 
     </div>
-    <form (submit)="onShow()" action="">
+    <form (submit)="onShow()" action="" autocomplete="off">
 
 
 

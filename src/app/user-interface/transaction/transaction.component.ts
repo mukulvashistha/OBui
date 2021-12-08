@@ -21,7 +21,7 @@ import { TransactionService } from 'src/app/shared/transaction.service';
   
   
       </div>
-      <form (submit)="onSubmit()" action="">
+      <form (submit)="onSubmit()" action="" autocomplete="off">
   
   
   
@@ -69,7 +69,6 @@ import { TransactionService } from 'src/app/shared/transaction.service';
 
       <option value=1>debit</option>
 
-      <option value=2>credit</option>
 
 
     </select>

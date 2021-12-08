@@ -33,6 +33,10 @@ import { TransactionService } from './shared/transaction.service';
 import { CardrequestComponent } from './user-interface/cardrequest/cardrequest.component';
 import { UpdatereqComponent } from './staff/updatereq/updatereq.component';
 import { AddaccountComponent } from './staff/addaccount/addaccount.component';
+import { ViewrequestComponent } from './staff/viewrequest/viewrequest.component';
+import { BalanceComponent } from './user-interface/balance/balance.component';
+import { ViewtransactionsComponent } from './user-interface/viewtransactions/viewtransactions.component';
+import { AlltransactionsComponent } from './staff/alltransactions/alltransactions.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +54,11 @@ import { AddaccountComponent } from './staff/addaccount/addaccount.component';
     TransactionComponent,
     CardrequestComponent,
     UpdatereqComponent,
-    AddaccountComponent
+    AddaccountComponent,
+    ViewrequestComponent,
+    BalanceComponent,
+    ViewtransactionsComponent,
+    AlltransactionsComponent
     
     
   ],

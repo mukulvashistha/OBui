@@ -16,7 +16,7 @@ import { AccountsService } from 'src/app/shared/accounts.service';
 
 
     </div>
-    <form (submit)="onShow()" action="">
+    <form (submit)="onShow()" action="" autocomplete="off">
 
 
 

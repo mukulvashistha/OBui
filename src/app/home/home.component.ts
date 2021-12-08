@@ -52,16 +52,16 @@ export class HomeComponent {
       if (matches) {
         return [
           { title: 'New User',action:"/addUser" ,cols: 2, rows: 1 },
-          { title: 'Staff Login',action:"/staff", cols: 2, rows: 1 },
-          { title: 'User Login', action:"/userInterface",cols: 2, rows: 1 },
+          { title: 'Staff Services',action:"/staff", cols: 2, rows: 1 },
+          { title: 'User Services', action:"/userInterface",cols: 2, rows: 1 },
           { title: 'About Us',action:"", cols: 2, rows: 1 }
         ];
       }
 
       return [
         { title: 'New User', cols: 1, rows: 1,action:"/addUser" },
-        { title: 'Staff Login', cols: 1, rows: 1,action:"/staff" },
-        { title: 'User Login', cols: 1, rows: 1 ,action:"/userInterface"},
+        { title: 'Staff Services', cols: 1, rows: 1,action:"/staff" },
+        { title: 'User Services', cols: 1, rows: 1 ,action:"/userInterface"},
         { title: 'About Us', cols: 1, rows: 1 ,action:""}
       ];
     })

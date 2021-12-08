@@ -18,7 +18,7 @@ import { Customer } from 'src/app/models/customer';
 
 
     </div>
-    <form (submit)="onShow()" action="">
+    <form (submit)="onShow()" action="" autocomplete="off">
 
 
 

@@ -18,11 +18,11 @@ import { AccountsService } from 'src/app/shared/accounts.service';
 
 
     </div>
-    <form (submit)="onShow()" action="">
+    <form (submit)="onShow()" action="" autocomplete="off">
 
     <div class="mb-3 input-group-sm ">
 
-      <label for="exampleFormControlInput1" class="form-label">Staff id</label>
+      <label for="exampleFormControlInput1" class="form-label">Customer id</label>
 
       <input type="number" [(ngModel)]= "Id" name= "Id" class="form-control rounded-pill" id="exampleFormControlInput1" placeholder=" ">
 

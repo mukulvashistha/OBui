@@ -26,7 +26,7 @@ import { CardrequestService } from 'src/app/shared/cardrequest.service';
  
 
 
-    <form (submit)="onSubmit()" action="">
+    <form (submit)="onSubmit()" action="" autocomplete="off">
     <div class="mb-3 input-group-sm ">
 
       <label for="exampleFormControlInput1" class="form-label">Account no.</label>

@@ -18,7 +18,7 @@ import { CustomerService } from 'src/app/shared/customer.service';
 
 
     </div>
-    <form (submit)="onShow()" action="">
+    <form (submit)="onShow()" action="" autocomplete="off">
 
 
 
@@ -56,7 +56,7 @@ import { CustomerService } from 'src/app/shared/customer.service';
   <thead>
 <tr><th>Customer Id</th>
 <th> last Transaction</th>
-<th>User Id Id</th>
+<th>User Id</th>
 </tr>
 <tbody><tr *ngFor="let user of listCustomer"><td>{{user.cust_id}}</td>
 <td>{{user.last_Transaction}}</td>
@@ -64,6 +64,7 @@ import { CustomerService } from 'src/app/shared/customer.service';
 </tr></tbody>
 </table>
 </div>
+
     <p>
       add-customer works!
     </p>

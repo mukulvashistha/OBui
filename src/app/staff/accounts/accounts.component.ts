@@ -38,7 +38,7 @@ import { Accounts } from 'src/app/models/accounts';
 
     <label for="exampleFormControlInput1" class="form-label">Password</label>
 
-    <input type="text" class="form-control rounded-pill" [(ngModel)] ="pass" name="pass" id="exampleFormControlInput1" placeholder="*********">
+    <input type="text" class="form-control rounded-pill" autocomplete="off" [(ngModel)] ="pass" name="pass" id="exampleFormControlInput1" placeholder="*********">
 
   </div>
 

@@ -50,19 +50,19 @@ export class UserInterfaceComponent {
       if (matches) {
         return [
           { title: 'View Accounts',action:"/viewaccounts" ,cols: 3, rows: 1 },
-          { title: 'View Transactions',action:"/staff", cols: 3, rows: 1 },
+          { title: 'View Transactions',action:"/viewtransactions", cols: 3, rows: 1 },
           { title: 'Card Application', action:"/cardrequest",cols: 3, rows: 1 },
           { title: 'Money Transfer',action:"/transaction", cols: 3, rows: 1 },
-          { title: 'Check Balance',action:"", cols: 3, rows: 1 }
+          { title: 'Check Balance',action:"/balance", cols: 3, rows: 1 }
         ];
       }
 
       return [
         { title: 'View Accounts', cols: 1, rows: 1,action:"/viewaccounts" },
-        { title: 'View Transactions', cols: 1, rows: 1,action:"/staff" },
+        { title: 'View Transactions', cols: 1, rows: 1,action:"/viewtransactions" },
         { title: 'Card Application', cols: 1, rows: 1 ,action:"/cardrequest"},
         { title: 'Money Transfer', cols: 1, rows: 1 ,action:"/transaction"},
-        { title: 'Check Balance',action:"", cols: 1, rows: 1 }
+        { title: 'Check Balance',action:"/balance", cols: 1, rows: 1 }
       ];
     })
   );
